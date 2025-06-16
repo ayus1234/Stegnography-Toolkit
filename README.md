@@ -33,4 +33,4 @@ A powerful and beginner-friendly **Steganography and Encryption Toolkit** built 
 git clone https://github.com/your-username/steganography-toolkit.git
 cd steganography-toolkit
 pip install -r requirements.txt
-streamlit run steganography_toolkit_random_salt.py
+streamlit run stego_app.py
