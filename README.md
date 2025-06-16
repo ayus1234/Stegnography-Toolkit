@@ -5,40 +5,42 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Made With ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 
-A powerful and beginner-friendly **Steganography and Encryption Toolkit** built with [Streamlit](https://streamlit.io/). This app allows you to hide encrypted text inside images or embed one image inside another using simple LSB (Least Significant Bit) techniques.
+A powerful and beginner-friendly **Steganography and Encryption Toolkit** built with [Streamlit](https://streamlit.io/). This web app allows you to hide encrypted text inside images or embed one image inside another using simple LSB (Least Significant Bit) techniques — all directly in your browser.
+
+🚀 **[Live Demo](https://stegnography-toolkit-lladwds8paxcwnkbfucv4t.streamlit.app/)** — Try it instantly on Streamlit Cloud!
 
 ---
 
 ## 📚 Table of Contents
 
-- [✨ Features](#features)
-- [🧪 Tech Stack](#tech-stack)
-- [🖥️ How to Use](#how-to-use)
-- [🖼️ Demo Screenshots](#demo-screenshots)
-- [🔐 Security Notes](#security-notes)
-- [⚙️ Setup Instructions](#setup-instructions)
-- [📄 License](#license)
+- [✨ Features](#-features)
+- [🧪 Tech Stack](#-tech-stack)
+- [🖥️ How to Use](#-how-to-use)
+- [🖼️ Demo Screenshots](#-demo-screenshots)
+- [🔐 Security Notes](#-security-notes)
+- [⚙️ Setup Instructions](#-setup-instructions)
+- [📄 License](#-license)
 
 ---
 
 ## ✨ Features
 
-- 🔐 **Text Encryption with Random Salt** using `Fernet` and `PBKDF2HMAC`
+- 🔐 **Text Encryption with Random Salt** using `Fernet` + `PBKDF2HMAC`
 - 📝 **Text-in-Image Hiding** (encrypt + embed message into an image)
 - 🖼️ **Image-in-Image Hiding** (embed one image inside another)
 - 🔍 **Message Extraction & Decryption**
 - 🎯 **Image Extraction from Stego Images**
-- 🛡️ **No server-side storage** – All operations are done locally in your browser
+- 🛡️ **Privacy First** — All operations are client-side in your browser
 
 ---
 
 ## 🧪 Tech Stack
 
-- [Streamlit](https://streamlit.io/)
-- [Python](https://www.python.org/)
-- [Pillow (PIL)](https://pypi.org/project/Pillow/)
-- [NumPy](https://numpy.org/)
-- [cryptography](https://cryptography.io/)
+- [Streamlit](https://streamlit.io/) – UI framework
+- [Python 3.8+](https://www.python.org/) – Core logic
+- [Pillow (PIL)](https://pypi.org/project/Pillow/) – Image manipulation
+- [NumPy](https://numpy.org/) – Data operations
+- [cryptography](https://cryptography.io/) – Secure encryption
 
 ---
 
@@ -47,30 +49,30 @@ A powerful and beginner-friendly **Steganography and Encryption Toolkit** built 
 ### 🔐 Tab 1: Text Encryption + Hiding
 
 #### 🔸 Embed Message:
-- Upload a **cover image**.
-- Enter a **password** (used to derive a strong encryption key).
-- Enter your **secret message**.
-- Click **Embed** and download the generated image with hidden data.
+- Upload a **cover image**
+- Enter a **password** (used to derive the encryption key)
+- Enter your **secret message**
+- Click **Embed** and download the stego image
 
 #### 🔸 Extract Message:
-- Upload the **stego image**.
-- Enter the **same password** used during embedding.
-- Click **Extract** to reveal the hidden message.
+- Upload the **stego image**
+- Enter the **same password**
+- Click **Extract** to reveal your secret message
 
-> 💡 **Random salt** is used per message, ensuring stronger cryptographic security. Salt is safely stored inside the image along with the encrypted message.
+> 💡 A **random salt** is automatically generated per message for stronger security. It's securely embedded in the image.
 
 ---
 
 ### 🖼️ Tab 2: Image-in-Image Hiding
 
 #### 🔸 Embed Image:
-- Upload a **cover image**.
-- Upload the **secret image** to hide.
-- Click **Hide Image** and download the result.
+- Upload a **cover image**
+- Upload a **secret image**
+- Click **Hide Image** to download the result
 
 #### 🔸 Extract Image:
-- Upload the **stego image**.
-- Click **Reveal Hidden Image** to view and download the hidden image.
+- Upload the **stego image**
+- Click **Reveal Hidden Image** to extract and view it
 
 ---
 
@@ -85,24 +87,24 @@ A powerful and beginner-friendly **Steganography and Encryption Toolkit** built 
 
 ## 🔐 Security Notes
 
-- Messages are encrypted using `Fernet` with keys derived from passwords via `PBKDF2HMAC` + **random salt**.
-- Salt is securely **prepended to the ciphertext** and extracted automatically during decryption.
-- While this tool provides basic encryption and steganography,  
-  **do not use it for high-risk or government-level secure communications**.
+- Messages are encrypted using **Fernet symmetric encryption**
+- Keys are derived from your password using **PBKDF2HMAC** with a **random salt**
+- Salt is **prepended to the ciphertext** and securely embedded in the image
+- ❗ While secure for casual use, **not intended for high-risk or military-grade security**
 
 ---
 
 ## ⚙️ Setup Instructions
 
 ```bash
-# Clone the repo
+# 1. Clone the repository
 git clone https://github.com/your-username/steganography-toolkit.git
 cd steganography-toolkit
 
-# Install dependencies
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# Run the app
+# 3. Run the Streamlit app
 streamlit run steganography_toolkit_random_salt.py
 ```
 
