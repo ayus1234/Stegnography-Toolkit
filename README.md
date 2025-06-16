@@ -34,7 +34,7 @@ git clone https://github.com/your-username/steganography-toolkit.git
 cd steganography-toolkit
 pip install -r requirements.txt
 streamlit run stego_app.py
-
+```
 ## 🖥️ How to Use
 
 ### 🔐 Tab 1: Text Encryption + Hiding
@@ -73,4 +73,3 @@ streamlit run stego_app.py
 - Salt is securely **prepended to the ciphertext** and extracted automatically during decryption.
 - While this tool provides basic encryption and steganography,  
   **do not use it for high-risk or government-level secure communications**.
-
