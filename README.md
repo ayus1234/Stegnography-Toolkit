@@ -104,3 +104,11 @@ pip install -r requirements.txt
 
 # Run the app
 streamlit run steganography_toolkit_random_salt.py
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).  
+See the LICENSE file for details.
