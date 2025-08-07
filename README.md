@@ -112,7 +112,7 @@ streamlit run steganography_toolkit_random_salt.py
 
 ## 📄 License
 
-📘 This project is open-source and available under the **MIT License**. 
-    See the full [LICENSE](LICENSE) file for complete details.
+- This project is open-source and available under the **MIT License**.
+- See the full [LICENSE](LICENSE) file for complete details.
 
 You are free to use, modify, and distribute this software in both personal and commercial projects, as long as you include the original license.
